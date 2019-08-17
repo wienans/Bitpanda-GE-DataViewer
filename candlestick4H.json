@@ -1,0 +1,619 @@
+https://api.exchange.bitpanda.com/public/v1/candlesticks/BTC_EUR?unit=HOURS&period=4&from=2019-08-07T11:00:00.080Z&to=2019-08-14T16:01:41.090Z
+[
+    {
+        "last_sequence": 87,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10479.24",
+        "low": "9000.0",
+        "open": "10411.0",
+        "close": "10479.24",
+        "volume": "69573.1870785",
+        "time": "2019-08-07T11:59:59.999Z"
+    },
+    {
+        "last_sequence": 394,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "11555.0",
+        "low": "10050.0",
+        "open": "10496.74",
+        "close": "10361.18",
+        "volume": "332397.6670797",
+        "time": "2019-08-07T15:59:59.999Z"
+    },
+    {
+        "last_sequence": 718,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10522.26",
+        "low": "9820.0",
+        "open": "10400.0",
+        "close": "10500.74",
+        "volume": "377923.8252442",
+        "time": "2019-08-07T19:59:59.999Z"
+    },
+    {
+        "last_sequence": 796,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10717.0",
+        "low": "10510.0",
+        "open": "10510.51",
+        "close": "10678.65",
+        "volume": "70865.3222664",
+        "time": "2019-08-07T23:59:59.999Z"
+    },
+    {
+        "last_sequence": 808,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10680.68",
+        "low": "10592.7",
+        "open": "10654.33",
+        "close": "10680.68",
+        "volume": "2744.6309188",
+        "time": "2019-08-08T03:59:59.999Z"
+    },
+    {
+        "last_sequence": 847,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10647.33",
+        "low": "10528.65",
+        "open": "10632.32",
+        "close": "10590.0",
+        "volume": "5217.7801802",
+        "time": "2019-08-08T07:59:59.999Z"
+    },
+    {
+        "last_sequence": 943,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10677.92",
+        "low": "10555.23",
+        "open": "10663.09",
+        "close": "10596.3",
+        "volume": "113571.8430403",
+        "time": "2019-08-08T11:59:59.999Z"
+    },
+    {
+        "last_sequence": 1089,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10627.4",
+        "low": "10410.88",
+        "open": "10529.0",
+        "close": "10435.23",
+        "volume": "69569.7065169",
+        "time": "2019-08-08T15:59:59.999Z"
+    },
+    {
+        "last_sequence": 1330,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10500.0",
+        "low": "10266.0",
+        "open": "10433.22",
+        "close": "10336.17",
+        "volume": "200398.0788089",
+        "time": "2019-08-08T19:59:59.999Z"
+    },
+    {
+        "last_sequence": 1445,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10703.0",
+        "low": "10287.85",
+        "open": "10324.83",
+        "close": "10703.0",
+        "volume": "48577.3292759",
+        "time": "2019-08-08T23:59:59.999Z"
+    },
+    {
+        "last_sequence": 1499,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10924.29",
+        "low": "10614.31",
+        "open": "10705.0",
+        "close": "10693.61",
+        "volume": "49969.2461437",
+        "time": "2019-08-09T03:59:59.999Z"
+    },
+    {
+        "last_sequence": 1620,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10762.18",
+        "low": "10538.72",
+        "open": "10577.7",
+        "close": "10762.18",
+        "volume": "59077.8481436",
+        "time": "2019-08-09T07:59:59.999Z"
+    },
+    {
+        "last_sequence": 1753,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10736.82",
+        "low": "10420.0",
+        "open": "10598.3",
+        "close": "10485.0",
+        "volume": "37722.2063175",
+        "time": "2019-08-09T11:59:59.999Z"
+    },
+    {
+        "last_sequence": 2059,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10643.99",
+        "low": "10430.0",
+        "open": "10444.22",
+        "close": "10486.91",
+        "volume": "373374.6683088",
+        "time": "2019-08-09T15:59:59.999Z"
+    },
+    {
+        "last_sequence": 2254,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10700.0",
+        "low": "10419.21",
+        "open": "10499.73",
+        "close": "10549.28",
+        "volume": "140412.090954",
+        "time": "2019-08-09T19:59:59.999Z"
+    },
+    {
+        "last_sequence": 2425,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10925.0",
+        "low": "10508.88",
+        "open": "10580.0",
+        "close": "10597.3",
+        "volume": "77494.8194459",
+        "time": "2019-08-09T23:59:59.999Z"
+    },
+    {
+        "last_sequence": 2478,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10691.35",
+        "low": "10528.73",
+        "open": "10644.32",
+        "close": "10528.73",
+        "volume": "17337.6465773",
+        "time": "2019-08-10T03:59:59.999Z"
+    },
+    {
+        "last_sequence": 2520,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10633.47",
+        "low": "10539.72",
+        "open": "10561.28",
+        "close": "10567.29",
+        "volume": "31342.2193258",
+        "time": "2019-08-10T07:59:59.999Z"
+    },
+    {
+        "last_sequence": 2790,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10660.0",
+        "low": "10058.03",
+        "open": "10580.29",
+        "close": "10169.09",
+        "volume": "142127.448035",
+        "time": "2019-08-10T11:59:59.999Z"
+    },
+    {
+        "last_sequence": 2957,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10393.0",
+        "low": "10090.0",
+        "open": "10158.08",
+        "close": "10161.91",
+        "volume": "70812.9167954",
+        "time": "2019-08-10T15:59:59.999Z"
+    },
+    {
+        "last_sequence": 3128,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10306.3",
+        "low": "10066.0",
+        "open": "10169.09",
+        "close": "10096.91",
+        "volume": "61367.3099722",
+        "time": "2019-08-10T19:59:59.999Z"
+    },
+    {
+        "last_sequence": 3259,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10210.0",
+        "low": "10044.0",
+        "open": "10096.91",
+        "close": "10115.06",
+        "volume": "28881.1493786",
+        "time": "2019-08-10T23:59:59.999Z"
+    },
+    {
+        "last_sequence": 3261,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10109.06",
+        "low": "10109.06",
+        "open": "10109.06",
+        "close": "10109.06",
+        "volume": "212.9978942",
+        "time": "2019-08-11T03:59:59.999Z"
+    },
+    {
+        "last_sequence": 3307,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10208.74",
+        "low": "10044.0",
+        "open": "10109.06",
+        "close": "10044.0",
+        "volume": "8163.1706425",
+        "time": "2019-08-11T07:59:59.999Z"
+    },
+    {
+        "last_sequence": 3412,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10210.0",
+        "low": "10011.0",
+        "open": "10050.0",
+        "close": "10210.0",
+        "volume": "15317.5755659",
+        "time": "2019-08-11T11:59:59.999Z"
+    },
+    {
+        "last_sequence": 3550,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10322.06",
+        "low": "10150.0",
+        "open": "10210.0",
+        "close": "10150.0",
+        "volume": "31983.984764",
+        "time": "2019-08-11T15:59:59.999Z"
+    },
+    {
+        "last_sequence": 3597,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10199.99",
+        "low": "10149.0",
+        "open": "10149.0",
+        "close": "10152.0",
+        "volume": "9992.3236654",
+        "time": "2019-08-11T19:59:59.999Z"
+    },
+    {
+        "last_sequence": 3731,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10408.48",
+        "low": "10100.0",
+        "open": "10150.0",
+        "close": "10299.15",
+        "volume": "31465.557441",
+        "time": "2019-08-11T23:59:59.999Z"
+    },
+    {
+        "last_sequence": 3751,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10301.15",
+        "low": "10186.1",
+        "open": "10301.15",
+        "close": "10193.9",
+        "volume": "2683.7381515",
+        "time": "2019-08-12T03:59:59.999Z"
+    },
+    {
+        "last_sequence": 3775,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10210.11",
+        "low": "10150.0",
+        "open": "10193.9",
+        "close": "10150.0",
+        "volume": "2825.4834531",
+        "time": "2019-08-12T07:59:59.999Z"
+    },
+    {
+        "last_sequence": 3838,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10186.9",
+        "low": "10134.07",
+        "open": "10186.9",
+        "close": "10135.07",
+        "volume": "7559.7523459",
+        "time": "2019-08-12T11:59:59.999Z"
+    },
+    {
+        "last_sequence": 4099,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10333.0",
+        "low": "10066.0",
+        "open": "10101.0",
+        "close": "10224.86",
+        "volume": "49854.2057064",
+        "time": "2019-08-12T15:59:59.999Z"
+    },
+    {
+        "last_sequence": 4253,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10327.0",
+        "low": "10120.0",
+        "open": "10140.0",
+        "close": "10207.11",
+        "volume": "110541.2780201",
+        "time": "2019-08-12T19:59:59.999Z"
+    },
+    {
+        "last_sequence": 4332,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10320.0",
+        "low": "10138.0",
+        "open": "10207.11",
+        "close": "10138.0",
+        "volume": "31008.9857977",
+        "time": "2019-08-12T23:59:59.999Z"
+    },
+    {
+        "last_sequence": 4340,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10173.91",
+        "low": "10158.08",
+        "open": "10158.08",
+        "close": "10173.91",
+        "volume": "9144.2615038",
+        "time": "2019-08-13T03:59:59.999Z"
+    },
+    {
+        "last_sequence": 4376,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10174.0",
+        "low": "10097.0",
+        "open": "10173.91",
+        "close": "10124.06",
+        "volume": "11725.7019962",
+        "time": "2019-08-13T07:59:59.999Z"
+    },
+    {
+        "last_sequence": 4553,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10196.1",
+        "low": "9990.0",
+        "open": "10124.06",
+        "close": "10041.02",
+        "volume": "119316.6434913",
+        "time": "2019-08-13T11:59:59.999Z"
+    },
+    {
+        "last_sequence": 5050,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "10187.2",
+        "low": "9720.44",
+        "open": "10039.02",
+        "close": "9758.38",
+        "volume": "272037.368774",
+        "time": "2019-08-13T15:59:59.999Z"
+    },
+    {
+        "last_sequence": 5342,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "9920.56",
+        "low": "9615.95",
+        "open": "9750.0",
+        "close": "9758.08",
+        "volume": "161138.7969801",
+        "time": "2019-08-13T19:59:59.999Z"
+    },
+    {
+        "last_sequence": 5548,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "9959.34",
+        "low": "9690.25",
+        "open": "9763.38",
+        "close": "9740.97",
+        "volume": "62351.4482634",
+        "time": "2019-08-13T23:59:59.999Z"
+    },
+    {
+        "last_sequence": 5764,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "9723.56",
+        "low": "9400.0",
+        "open": "9723.56",
+        "close": "9537.7",
+        "volume": "30053.9268618",
+        "time": "2019-08-14T03:59:59.999Z"
+    },
+    {
+        "last_sequence": 5900,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "9642.71",
+        "low": "9442.31",
+        "open": "9541.71",
+        "close": "9466.01",
+        "volume": "66621.7781646",
+        "time": "2019-08-14T07:59:59.999Z"
+    },
+    {
+        "last_sequence": 6378,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "9518.1",
+        "low": "9280.0",
+        "open": "9506.24",
+        "close": "9380.39",
+        "volume": "192764.9535184",
+        "time": "2019-08-14T11:59:59.999Z"
+    },
+    {
+        "last_sequence": 6652,
+        "instrument_code": "BTC_EUR",
+        "granularity": {
+            "unit": "HOURS",
+            "period": 4
+        },
+        "high": "9694.66",
+        "low": "9363.48",
+        "open": "9424.31",
+        "close": "9370.0",
+        "volume": "160259.5137529",
+        "time": "2019-08-14T15:59:59.999Z"
+    }
+]
