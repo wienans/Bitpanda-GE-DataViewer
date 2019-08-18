@@ -6,7 +6,6 @@ except ImportError:
 import time
 import json
 import pprint
-import requests
 import urllib3
 def on_message(ws, message):
     msg=json.loads(message)
