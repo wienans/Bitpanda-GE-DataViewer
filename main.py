@@ -7,6 +7,8 @@ import time
 import json
 import pprint
 import urllib3
+import csv
+
 def on_message(ws, message):
     msg=json.loads(message)
     print(msg)
@@ -65,6 +67,27 @@ if __name__ == "__main__":
         if inp == "res2":
             res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/order-book/BTC_EUR?level=1')
             print(json.loads(res.data.decode('utf-8')))
+        if inp == "readData":
+            print("This may take a while")
+            res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/candlesticks/BTC_EUR?unit=HOURS&period=4&from=2019-08-07T11:00:00.080Z&to=2019-08-14T16:01:41.090Z')
+            data=json.loads(res.data.decode('utf-8'))
+            csvDatei=open('data.csv','w+',newline='')
+            csvwriter = csv.writer(csvDatei)
+            count = 0
+            for interval in data:
+                interval.pop('last_sequence')
+                interval.pop('granularity')
+                interval.pop('instrument_code')
+                interval['time']=interval['time'][11:23]
+                if count == 0:
+                    header = interval.keys()
+                    csvwriter.writerow(header)
+                    count+=1
+                csvwriter.writerow(interval.values())
+            csvDatei.close()
+            print("Finished DataGrabbing")
+
+
         if inp == "close":
             check=1
             ws.close()

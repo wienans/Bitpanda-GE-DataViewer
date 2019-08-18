@@ -1,4 +1,4 @@
 {
     "url": "wss://streams.exchange.bitpanda.com/",
-    "enableWebsocketTrace": 1
+    "enableWebsocketTrace": 0
 }

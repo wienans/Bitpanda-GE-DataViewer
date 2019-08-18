@@ -18,3 +18,9 @@
 {"ticker_updates":[{"instrument":"BTC_EUR","last_price":"9064.56","price_change":"-353.22","price_change_percentage":"-3.75","high":"9478.85","low":"9061.64","volume":"502906.6910865"}],"channel_name":"MARKET_TICKER","type":"MARKET_TICKER_UPDATES"}
 {"ticker_updates":[{"instrument":"BTC_EUR","last_price":"9078.86","price_change":"-338.92","price_change_percentage":"-3.6","high":"9478.85","low":"9061.64","volume":"522059.933638"}],"channel_name":"MARKET_TICKER","type":"MARKET_TICKER_UPDATES"}
 {"ticker_updates":[{"instrument":"BTC_EUR","last_price":"9134.81","price_change":"-282.97","price_change_percentage":"-3.0","high":"9478.85","low":"9061.64","volume":"540512.2395387"}],"channel_name":"MARKET_TICKER","type":"MARKET_TICKER_UPDATES"}
+{"channels":[{"instrument_codes":["BTC_EUR","ETH_EUR"],"name":"MARKET_TICKER"}],"type":"SUBSCRIPTIONS"}
+{"ticker_updates":[{"instrument":"BTC_EUR","last_price":"9452.65","price_change":"147.89","price_change_percentage":"1.59","high":"9529.06","low":"9061.64","volume":"335124.8024314"},{"instrument":"ETH_EUR","last_price":"178.64","price_change":"12.18","price_change_percentage":"7.32","high":"178.64","low":"166.22","volume":"1988.859292"}],"channel_name":"MARKET_TICKER","type":"MARKET_TICKER_UPDATES"}
+{"channel_name":"MARKET_TICKER","type":"UNSUBSCRIBED"}
+{"channels":[{"instrument_codes":["BTC_EUR","ETH_EUR"],"name":"MARKET_TICKER"}],"type":"SUBSCRIPTIONS"}
+{"ticker_updates":[{"instrument":"BTC_EUR","last_price":"9447.59","price_change":"142.83","price_change_percentage":"1.54","high":"9529.06","low":"9061.64","volume":"336430.160937"},{"instrument":"ETH_EUR","last_price":"178.64","price_change":"12.18","price_change_percentage":"7.32","high":"178.64","low":"166.22","volume":"1988.859292"}],"channel_name":"MARKET_TICKER","type":"MARKET_TICKER_UPDATES"}
+{"channel_name":"MARKET_TICKER","type":"UNSUBSCRIBED"}
