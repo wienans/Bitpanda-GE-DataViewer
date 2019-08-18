@@ -8,6 +8,8 @@ import json
 import pprint
 import urllib3
 import csv
+import matplotlib.pyplot as plt
+import numpy as np
 
 def on_message(ws, message):
     msg=json.loads(message)
@@ -61,12 +63,10 @@ if __name__ == "__main__":
             unsub()
         if inp == "sub":
             sub()
-        if inp == "res":
+        if inp == "time":
             res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/time')
             print(json.loads(res.data.decode('utf-8')))
-        if inp == "res2":
-            res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/order-book/BTC_EUR?level=1')
-            print(json.loads(res.data.decode('utf-8')))
+
         if inp == "readData":
             print("This may take a while")
             res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/candlesticks/BTC_EUR?unit=HOURS&period=4&from=2019-08-07T11:00:00.080Z&to=2019-08-14T16:01:41.090Z')
@@ -87,6 +87,42 @@ if __name__ == "__main__":
             csvDatei.close()
             print("Finished DataGrabbing")
 
+        if inp == "OrderBook":
+            print("This may take a while")
+            res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/order-book/BEST_EUR?level=2')
+            data=json.loads(res.data.decode('utf-8'))
+            currency=data['instrument_code']
+            bids=data['bids']
+            asks=data['asks']
+            bidprices = np.array([])
+            askprices = np.array([])
+            bidamount = np.array([])
+            askamount = np.array([])
+            for bid in bids:
+                bidprices=np.insert(bidprices,0,float(bid['price']))
+                try:
+                    bidamount=np.insert(bidamount,0,bidamount[0]+float(bid['amount']))
+                except:
+                   bidamount=np.insert(bidamount,0,float(bid['amount'])) 
+            middleprice = bidprices[-1]
+            print(middleprice)
+            for ask in asks:
+                askprices=np.append(askprices,float(ask['price']))
+                try:
+                    askamount=np.append(askamount,askamount[-1]+float(ask['amount']))
+                except:
+                    askamount=np.append(askamount,float(ask['amount']))
+            prices=np.append(bidprices,askprices)
+            amount=np.append(bidamount,askamount)
+            bidcap = np.multiply(bidamount,bidprices)
+            askcap = np.multiply(askamount,askprices)
+            cap=np.multiply(amount,prices)
+            plt.plot(bidprices,bidamount,'g',askprices,askamount,'r')
+            # plt.axis([0.8*middleprice,1.2*middleprice,0,20000])
+            plt.axis([0,middleprice*5,0,np.maximum(np.amax(bidamount),np.amax(askamount))])
+            plt.suptitle('Tiefendiagram '+ currency)
+            plt.show()
+            print("Finished OrderBook Grabbing")
 
         if inp == "close":
             check=1
