@@ -125,8 +125,8 @@ if __name__ == "__main__":
             plt.axis([0.8*middleprice,1.2*middleprice,0,np.maximum(bidamount[findNearestIndex(bidprices,0.8*middleprice)]*1.1,1.1*askamount[findNearestIndex(askprices,1.2*middleprice)])])
             plt.suptitle('Tiefendiagram '+ currency+'\nMittlerer Preis:'+ str(middleprice))
             plt.show()
-            print("Finished OrderBook Grabbing")
-            
+            print("Finished OrderBook Grabbing")  
+
         if inp == "DayVolume":
             res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/time')
             data=json.loads(res.data.decode('utf-8'))
