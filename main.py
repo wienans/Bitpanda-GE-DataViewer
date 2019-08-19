@@ -97,7 +97,7 @@ if __name__ == "__main__":
 
         if inp == "OrderBook":
             print("This may take a while")
-            res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/order-book/BEST_EUR?level=2')
+            res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/order-book/BTC_EUR?level=2')
             data=json.loads(res.data.decode('utf-8'))
             currency=data['instrument_code']
             bids=data['bids']
@@ -121,14 +121,20 @@ if __name__ == "__main__":
             middleprice=(bidprices[-1]+askprices[0])/2
             prices=np.append(bidprices,askprices)
             amount=np.append(bidamount,askamount)
-            bidcap = np.multiply(bidamount,bidprices)
-            askcap = np.multiply(askamount,askprices)
-            cap=np.multiply(amount,prices)
             plt.plot(bidprices,bidamount,'g',askprices,askamount,'r')
             plt.axis([0.8*middleprice,1.2*middleprice,0,np.maximum(bidamount[findNearestIndex(bidprices,0.8*middleprice)]*1.1,1.1*askamount[findNearestIndex(askprices,1.2*middleprice)])])
             plt.suptitle('Tiefendiagram '+ currency+'\nMittlerer Preis:'+ str(middleprice))
             plt.show()
             print("Finished OrderBook Grabbing")
+            
+        if inp == "DayVolume":
+            res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/time')
+            data=json.loads(res.data.decode('utf-8'))
+            time = data['iso']
+            res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/candlesticks/PAN_EUR?unit=DAYS&period=1&from=2019-08-07T11:00:00.080Z&to='+time)
+            data=json.loads(res.data.decode('utf-8'))
+            for interval in data:
+                print(float(interval['volume']))
 
         if inp == "close":
             check=1
