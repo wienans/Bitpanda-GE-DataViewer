@@ -100,6 +100,7 @@ if __name__ == "__main__":
             res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/order-book/BTC_EUR?level=2')
             data=json.loads(res.data.decode('utf-8'))
             currency=data['instrument_code']
+            [cbuy,csell]=currency.split("_")
             bids=data['bids']
             asks=data['asks']
             bidprices = np.array([])
@@ -124,6 +125,8 @@ if __name__ == "__main__":
             plt.plot(bidprices,bidamount,'g',askprices,askamount,'r')
             plt.axis([0.8*middleprice,1.2*middleprice,0,np.maximum(bidamount[findNearestIndex(bidprices,0.8*middleprice)]*1.1,1.1*askamount[findNearestIndex(askprices,1.2*middleprice)])])
             plt.suptitle('Tiefendiagram '+ currency+'\nMittlerer Preis:'+ str(middleprice))
+            plt.ylabel('Amount ['+cbuy+']')
+            plt.xlabel('Price ['+csell+']')
             plt.show()
             print("Finished OrderBook Grabbing")  
 

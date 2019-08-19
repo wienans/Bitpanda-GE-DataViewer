@@ -2,10 +2,6 @@ import websocket
 import tkinter as tk
 from tkinter import ttk
 import threading
-try:
-    import thread
-except ImportError:
-    import _thread as thread
 import time
 import json
 import pprint
@@ -13,6 +9,8 @@ import urllib3
 import csv
 import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib.figure import Figure
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg,NavigationToolbar2Tk
 
 class App(threading.Thread):
 
@@ -24,29 +22,49 @@ class App(threading.Thread):
         self.root.quit()
 
     def run(self):
+        #self.mainWcolor = '#4D4D4D'
         self.root = tk.Tk()
         self.root.protocol("WM_DELETE_WINDOW", self.callback)
 
         self.root.title("Bitpanda-GE-DataViewer")
         self.root.minsize(640,400)
-        #self.root.configure(background = '#4D4D4D')
+        #self.root.configure(background = self.mainWcolor)
 
         self.tabcontrol = ttk.Notebook(self.root)
-        self.tabHome = ttk.Frame(self.tabcontrol)
+        self.tabHome = tk.Frame(self.tabcontrol)
         self.tabcontrol.add(self.tabHome, text="Home")
-        self.tabMarketView = ttk.Frame(self.tabcontrol)
+        self.tabMarketView = tk.Frame(self.tabcontrol)
+        self.tabMarketView.columnconfigure(0,pad=3)
+        self.tabMarketView.columnconfigure(1,pad=3)
+        self.tabMarketView.rowconfigure(0,pad=3)
+        self.tabMarketView.rowconfigure(1,pad=3)
         self.tabcontrol.add(self.tabMarketView, text="Market View")
-        self.tabLiveTraiding = ttk.Frame(self.tabcontrol)
+        self.tabLiveTraiding = tk.Frame(self.tabcontrol)
         self.tabcontrol.add(self.tabLiveTraiding, text="Live Traiding")
-        self.tabLocalData = ttk.Frame(self.tabcontrol)
+        self.tabLocalData = tk.Frame(self.tabcontrol)
         self.tabcontrol.add(self.tabLocalData, text="Local Data")
-        self.tabBacktest = ttk.Frame(self.tabcontrol)
+        self.tabBacktest = tk.Frame(self.tabcontrol)
         self.tabcontrol.add(self.tabBacktest, text="Backtest")
-        self.tabConfig = ttk.Frame(self.tabcontrol)
+        self.tabConfig = tk.Frame(self.tabcontrol)
         self.tabcontrol.add(self.tabConfig, text="Config")
+        self.matplotCanvas()
         self.tabcontrol.pack(expan = 1, fill = "both")
 
+
+
         self.root.mainloop()
+
+    def matplotCanvas(self):
+        f = Figure(figsize=(5,5),dpi=100)
+        a = f.add_subplot(111)
+        a.plot([1,2,3,4,5,6],[1,2,3,4,5,6])
+        canvas = FigureCanvasTkAgg(f,master=self.tabMarketView)
+        canvas._tkcanvas.grid(row=0,column=1)
+        f = Figure(figsize=(5,5),dpi=100)
+        a = f.add_subplot(111)
+        a.plot([6,4,3,2,5,6],[1,2,3,4,5,6])
+        canvas = FigureCanvasTkAgg(f,master=self.tabMarketView)
+        canvas._tkcanvas.grid(row=0,column=0)
 
 def on_message(ws, message):
     msg=json.loads(message)
@@ -86,9 +104,11 @@ if __name__ == "__main__":
                                 on_error = on_error,
                                 on_close = on_close)
     ws.on_open = on_open
-    thread.start_new_thread(startWS, ())
+
+    socketThread = threading.Thread(target=startWS)
+    #socketThread.start()
     ffile=open("recv.txt", "a+")
-    check = 0
+    check = 1
     while check == 0:
         inp=input()
         if inp == "close":
