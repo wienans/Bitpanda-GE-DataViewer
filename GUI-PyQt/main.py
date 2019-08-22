@@ -13,6 +13,8 @@ import csv
 
 class Dialog(QtWidgets.QMainWindow):
     def __init__(self):
+        global pair24hVolume
+        pair24hVolume = np.array(['0'])
         QtWidgets.QMainWindow.__init__(self)
         ui_path = os.path.dirname(os.path.abspath(__file__))
         loadUi(os.path.join(ui_path,"ui/Main.ui"),self)
@@ -23,8 +25,11 @@ class Dialog(QtWidgets.QMainWindow):
         self.tabWidget.currentChanged.connect(self.tabWidgetChanged)
         self.cBTraidPairs.currentIndexChanged.connect(self.cBTraidPairsChanged)
         self.zoomDeapthChart = 0.1
-
+        self.time = '2019-08-07T11:00:00.080Z'
+        self.getServerTime()
         self.fillTraidingPairs()
+        # sub=json.dumps({'type': 'SUBSCRIBE','channels': [{'name': 'MARKET_TICKER','instrument_codes': ['PAN_BTC','BTC_EUR','MIOTA_BTC','MIOTA_EUR','ETH_EUR']}]})
+        # ws.send(sub)
 
 
     def tabWidgetChanged(self,i):
@@ -32,15 +37,24 @@ class Dialog(QtWidgets.QMainWindow):
             print("Home")
         elif i == self.tabWidget.indexOf(self.tabDataView):
             print("DataView")
-            self.plotDeapthChart(self.zoomDeapthChart)
+            #self.plotDeapthChart(self.zoomDeapthChart)
         elif i == self.tabWidget.indexOf(self.tabConfig):
             print("Config")
 
     def cBTraidPairsChanged(self,i):
+        res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/candlesticks/'+self.cBTraidPairs.currentText()+'?unit=DAYS&period=1&from=2019-08-07T11:00:00.080Z&to='+self.time)
+        data=json.loads(res.data.decode('utf-8'))
+        currency = self.cBTraidPairs.currentText()
+        [_,csell]=currency.split("_")
+        self.lVolume1Days.setText(str(float(data[-2]['volume']))+' '+csell)
+        self.lVolume2Days.setText(str(float(data[-3]['volume']))+' '+csell)
+        self.lVolume3Days.setText(str(float(data[-4]['volume']))+' '+csell)
+        self.lVolume4Days.setText(str(float(data[-5]['volume']))+' '+csell)
+        self.lVolume5Days.setText(str(float(data[-6]['volume']))+' '+csell)
+        #self.lVolume24h.setText(str(pair24hVolume[self.cBTraidPairs.currentIndex()]))
         self.plotDeapthChart(self.zoomDeapthChart)
 
     def plotDeapthChart(self,cmdZoom):
-
         res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/order-book/'+self.cBTraidPairs.currentText()+'?level=2')
         data=json.loads(res.data.decode('utf-8'))
         currency=data['instrument_code']
@@ -78,13 +92,13 @@ class Dialog(QtWidgets.QMainWindow):
         self.mplDeapthChart.canvas.draw()
     
     def zoomInDeapthChart(self):
-        self.zoomDeapthChart+=0.1
+        if (self.zoomDeapthChart-0.1) > 0.001:
+            self.zoomDeapthChart-=0.1
         self.plotDeapthChart(self.zoomDeapthChart)
         print(self.zoomDeapthChart)
 
     def zoomOutDeapthChart(self):
-        if (self.zoomDeapthChart-0.1) > 0.001:
-            self.zoomDeapthChart-=0.1
+        self.zoomDeapthChart+=0.1
         self.plotDeapthChart(self.zoomDeapthChart)
         print(self.zoomDeapthChart)
     
@@ -93,6 +107,11 @@ class Dialog(QtWidgets.QMainWindow):
         data=json.loads(res.data.decode('utf-8'))
         for pair in data:
             self.cBTraidPairs.addItem(pair['base']['code']+"_"+pair['quote']['code'])
+    
+    def getServerTime(self):
+        res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/time')
+        data=json.loads(res.data.decode('utf-8'))
+        self.time = data['iso']
 
     def findNearestIndex(self,array, value):
         array = np.asarray(array)
@@ -106,7 +125,9 @@ def on_message(ws, message):
     print(msg)
     if msg['type']!="HEARTBEAT" and msg['type']!="PRICE_POINT_UPDATES" :
         ffile.write('\n{}'.format(message))
-    
+
+
+            
 
 def on_error(ws, error):
     print("Error")
@@ -120,6 +141,7 @@ def on_open(ws):
 
 def startWebSocket():
     ws.run_forever(suppress_origin=1,ping_timeout = 20)
+    
 def startWindow():
     window.show()
 
