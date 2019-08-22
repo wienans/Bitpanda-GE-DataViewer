@@ -3,7 +3,6 @@ try:
     import thread
 except ImportError:
     import _thread as thread
-import time
 import json
 import pprint
 import urllib3
