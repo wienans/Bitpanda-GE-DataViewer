@@ -26,11 +26,22 @@ class Dialog(QtWidgets.QMainWindow):
         self.cBTraidPairs.currentIndexChanged.connect(self.cBTraidPairsChanged)
         self.zoomDeapthChart = 0.1
         self.time = '2019-08-07T11:00:00.080Z'
+        self.RepeatingEventTimer = QtCore.QTimer()
+        self.RepeatingEventTimer.timeout.connect(self.RepeatingEvents)
+        self.RepeatingEventTimer.start(10000)
+
         self.getServerTime()
         self.fillTraidingPairs()
         # sub=json.dumps({'type': 'SUBSCRIBE','channels': [{'name': 'MARKET_TICKER','instrument_codes': ['PAN_BTC','BTC_EUR','MIOTA_BTC','MIOTA_EUR','ETH_EUR']}]})
         # ws.send(sub)
 
+    def RepeatingEvents(self):
+        if self.tabWidget.currentIndex() == self.tabWidget.indexOf(self.tabHome):
+            print("Home")
+        elif self.tabWidget.currentIndex() == self.tabWidget.indexOf(self.tabDataView):
+            self.cBTraidPairsChanged()
+        elif self.tabWidget.currentIndex() == self.tabWidget.indexOf(self.tabConfig):
+            print("Config")
 
     def tabWidgetChanged(self,i):
         if i == self.tabWidget.indexOf(self.tabHome):
@@ -41,7 +52,7 @@ class Dialog(QtWidgets.QMainWindow):
         elif i == self.tabWidget.indexOf(self.tabConfig):
             print("Config")
 
-    def cBTraidPairsChanged(self,i):
+    def cBTraidPairsChanged(self):
         res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/candlesticks/'+self.cBTraidPairs.currentText()+'?unit=DAYS&period=1&from=2019-08-07T11:00:00.080Z&to='+self.time)
         data=json.loads(res.data.decode('utf-8'))
         currency = self.cBTraidPairs.currentText()
