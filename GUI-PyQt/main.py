@@ -10,6 +10,9 @@ import json
 import pprint
 import urllib3
 import csv
+import matplotlib.dates as mdates
+import matplotlib.ticker as mticker
+from mpl_finance import candlestick_ohlc
 
 class Dialog(QtWidgets.QMainWindow):
     def __init__(self):
@@ -64,6 +67,26 @@ class Dialog(QtWidgets.QMainWindow):
         self.lVolume5Days.setText(str(float(data[-6]['volume']))+' '+csell)
         #self.lVolume24h.setText(str(pair24hVolume[self.cBTraidPairs.currentIndex()]))
         self.plotDeapthChart(self.zoomDeapthChart)
+        self.plotCandleChart(data)
+    
+    def plotCandleChart(self,data):
+        res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/candlesticks/'+self.cBTraidPairs.currentText()+'?unit=HOURS&period=4&from=2019-08-08T11:00:00.080Z&to='+self.time)
+        data=json.loads(res.data.decode('utf-8'))
+        n=len(data)
+        quotes = np.empty((n,0)).tolist()
+        i=0
+        for instance in data:
+            quotes[i].append(mdates.datestr2num(str(instance['time'][0:19].replace('T',' '))))
+            quotes[i].append(float(instance['open']))
+            quotes[i].append(float(instance['high']))
+            quotes[i].append(float(instance['low']))
+            quotes[i].append(float(instance['close']))
+            i+=1
+        self.mplCandleChart.canvas.axes.clear()
+        candlestick_ohlc(self.mplCandleChart.canvas.axes, quotes,width=0.05)
+        self.mplCandleChart.canvas.axes.set_xlabel('Date')
+        self.mplCandleChart.canvas.axes.set_ylabel('Price')
+        self.mplCandleChart.canvas.draw()
 
     def plotDeapthChart(self,cmdZoom):
         res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/order-book/'+self.cBTraidPairs.currentText()+'?level=2')
@@ -157,7 +180,7 @@ def startWindow():
     window.show()
 
 if __name__ == "__main__":
-    global ws,ffile,window
+    global ws,ffile,window,check
     #load Config
     config=open("config.json","r")
     cdata=json.load(config)
