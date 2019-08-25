@@ -294,6 +294,12 @@ if __name__ == "__main__":
     check = 0
     while check == 0:
         inp=input()
+        if inp == "sub":
+            sub=json.dumps({"type": "SUBSCRIBE","channels": [{"name": "PRICE_TICKS","instrument_codes": ["BTC_EUR","ETH_EUR"]}]})
+            ws.send(sub)
+        if inp == "unsub":
+            unsub=json.dumps({"type": "UNSUBSCRIBE","channels": ["PRICE_TICKS"]})
+            ws.send(unsub)
         if inp == "close":
             check=1
             ws.close()

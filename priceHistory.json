@@ -1,0 +1,1626 @@
+{
+    "channels": [
+        {
+            "instrument_codes": [
+                "BTC_EUR",
+                "ETH_EUR"
+            ],
+            "name": "PRICE_TICKS"
+        }
+    ],
+    "type": "SUBSCRIPTIONS"
+}
+{
+    "instrument_code": "BTC_EUR",
+    "history": [
+        {
+            "price": "9140.66",
+            "amount": "0.04261",
+            "best_ask": "9140.66",
+            "best_bid": "9093.41",
+            "taker_side": "BUY",
+            "time": "2019-08-25T12: 30: 41.044Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18174
+        },
+        {
+            "price": "9141.94",
+            "amount": "0.0648",
+            "best_ask": "9141.94",
+            "best_bid": "9095.53",
+            "taker_side": "BUY",
+            "time": "2019-08-25T12: 32: 11.221Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18176
+        },
+        {
+            "price": "9141.94",
+            "amount": "0.0863",
+            "best_ask": "9141.94",
+            "best_bid": "9097.69",
+            "taker_side": "BUY",
+            "time": "2019-08-25T12: 34: 10.314Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18178
+        },
+        {
+            "price": "9132.38",
+            "amount": "0.0142",
+            "best_ask": "9132.38",
+            "best_bid": "9092.86",
+            "taker_side": "BUY",
+            "time": "2019-08-25T12: 36: 10.946Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18180
+        },
+        {
+            "price": "9158.89",
+            "amount": "0.1747",
+            "best_ask": "9158.89",
+            "best_bid": "9103.26",
+            "taker_side": "BUY",
+            "time": "2019-08-25T12: 44: 11.796Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18182
+        },
+        {
+            "price": "9158.89",
+            "amount": "0.08527",
+            "best_ask": "9158.89",
+            "best_bid": "9080.0",
+            "taker_side": "BUY",
+            "time": "2019-08-25T12: 46: 05.344Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18184
+        },
+        {
+            "price": "9158.89",
+            "amount": "0.05497",
+            "best_ask": "9158.89",
+            "best_bid": "9080.0",
+            "taker_side": "BUY",
+            "time": "2019-08-25T12: 46: 06.358Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18186
+        },
+        {
+            "price": "9169.72",
+            "amount": "0.00361",
+            "best_ask": "9249.0",
+            "best_bid": "9169.72",
+            "taker_side": "SELL",
+            "time": "2019-08-25T12: 46: 15.477Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18188
+        },
+        {
+            "price": "9164.07",
+            "amount": "0.01175",
+            "best_ask": "9224.0",
+            "best_bid": "9164.07",
+            "taker_side": "SELL",
+            "time": "2019-08-25T12: 46: 33.716Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18190
+        },
+        {
+            "price": "9240.87",
+            "amount": "0.0948",
+            "best_ask": "9240.87",
+            "best_bid": "9166.52",
+            "taker_side": "BUY",
+            "time": "2019-08-25T12: 50: 23.796Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18192
+        },
+        {
+            "price": "9201.8",
+            "amount": "0.00719",
+            "best_ask": "9240.45",
+            "best_bid": "9201.8",
+            "taker_side": "SELL",
+            "time": "2019-08-25T12: 52: 03.102Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18194
+        },
+        {
+            "price": "9210.56",
+            "amount": "0.01439",
+            "best_ask": "9249.0",
+            "best_bid": "9210.56",
+            "taker_side": "SELL",
+            "time": "2019-08-25T12: 52: 21.352Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18196
+        },
+        {
+            "price": "9249.0",
+            "amount": "0.2",
+            "best_ask": "9249.0",
+            "best_bid": "9080.0",
+            "taker_side": "BUY",
+            "time": "2019-08-25T12: 53: 32.493Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18198
+        },
+        {
+            "price": "9280.0",
+            "amount": "0.003",
+            "best_ask": "9280.0",
+            "best_bid": "9259.59",
+            "taker_side": "BUY",
+            "time": "2019-08-25T12: 54: 14.055Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18200
+        },
+        {
+            "price": "9301.44",
+            "amount": "0.03968",
+            "best_ask": "9301.44",
+            "best_bid": "9259.59",
+            "taker_side": "BUY",
+            "time": "2019-08-25T12: 54: 14.055Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18201
+        },
+        {
+            "price": "9302.0",
+            "amount": "0.035",
+            "best_ask": "9302.0",
+            "best_bid": "9259.59",
+            "taker_side": "BUY",
+            "time": "2019-08-25T12: 54: 14.055Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18202
+        },
+        {
+            "price": "9303.0",
+            "amount": "0.27262",
+            "best_ask": "9303.0",
+            "best_bid": "9259.59",
+            "taker_side": "BUY",
+            "time": "2019-08-25T12: 54: 14.055Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18203
+        },
+        {
+            "price": "9240.8",
+            "amount": "0.03303",
+            "best_ask": "9275.03",
+            "best_bid": "9240.8",
+            "taker_side": "SELL",
+            "time": "2019-08-25T13: 08: 56.946Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18205
+        },
+        {
+            "price": "9221.12",
+            "amount": "0.23077",
+            "best_ask": "9275.03",
+            "best_bid": "9221.12",
+            "taker_side": "SELL",
+            "time": "2019-08-25T13: 08: 56.946Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18206
+        },
+        {
+            "price": "9221.09",
+            "amount": "0.17865",
+            "best_ask": "9275.03",
+            "best_bid": "9221.09",
+            "taker_side": "SELL",
+            "time": "2019-08-25T13: 08: 56.946Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18207
+        },
+        {
+            "price": "9229.11",
+            "amount": "0.00384",
+            "best_ask": "9266.86",
+            "best_bid": "9229.11",
+            "taker_side": "SELL",
+            "time": "2019-08-25T13: 17: 53.159Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18209
+        },
+        {
+            "price": "9229.11",
+            "amount": "0.004",
+            "best_ask": "9266.86",
+            "best_bid": "9229.11",
+            "taker_side": "SELL",
+            "time": "2019-08-25T13: 20: 25.218Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18211
+        },
+        {
+            "price": "9235.0",
+            "amount": "0.01957",
+            "best_ask": "9254.66",
+            "best_bid": "9235.0",
+            "taker_side": "SELL",
+            "time": "2019-08-25T13: 26: 04.387Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18213
+        },
+        {
+            "price": "9215.27",
+            "amount": "0.01659",
+            "best_ask": "9254.66",
+            "best_bid": "9215.27",
+            "taker_side": "SELL",
+            "time": "2019-08-25T13: 26: 04.387Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18214
+        },
+        {
+            "price": "9229.11",
+            "amount": "0.13301",
+            "best_ask": "9244.15",
+            "best_bid": "9229.11",
+            "taker_side": "SELL",
+            "time": "2019-08-25T13: 38: 53.513Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18216
+        },
+        {
+            "price": "9170.0",
+            "amount": "0.03547",
+            "best_ask": "9190.59",
+            "best_bid": "9170.0",
+            "taker_side": "SELL",
+            "time": "2019-08-25T14: 26: 10.648Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18218
+        },
+        {
+            "price": "9104.01",
+            "amount": "0.42",
+            "best_ask": "9146.52",
+            "best_bid": "9104.01",
+            "taker_side": "SELL",
+            "time": "2019-08-25T14: 27: 01.341Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18220
+        },
+        {
+            "price": "9104.01",
+            "amount": "0.42",
+            "best_ask": "9146.52",
+            "best_bid": "9104.01",
+            "taker_side": "SELL",
+            "time": "2019-08-25T14: 27: 06.411Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18222
+        },
+        {
+            "price": "9054.68",
+            "amount": "0.317",
+            "best_ask": "9054.68",
+            "best_bid": "9017.5",
+            "taker_side": "BUY",
+            "time": "2019-08-25T14: 28: 07.263Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18224
+        },
+        {
+            "price": "9017.5",
+            "amount": "0.003",
+            "best_ask": "9044.47",
+            "best_bid": "9017.5",
+            "taker_side": "SELL",
+            "time": "2019-08-25T14: 29: 17.261Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18226
+        },
+        {
+            "price": "9017.0",
+            "amount": "0.00309",
+            "best_ask": "9044.47",
+            "best_bid": "9017.0",
+            "taker_side": "SELL",
+            "time": "2019-08-25T14: 29: 17.261Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18227
+        },
+        {
+            "price": "9005.0",
+            "amount": "0.00352",
+            "best_ask": "9015.0",
+            "best_bid": "9005.0",
+            "taker_side": "SELL",
+            "time": "2019-08-25T14: 29: 32.477Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18229
+        },
+        {
+            "price": "9000.0",
+            "amount": "0.02818",
+            "best_ask": "9015.0",
+            "best_bid": "9000.0",
+            "taker_side": "SELL",
+            "time": "2019-08-25T14: 29: 32.477Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18230
+        },
+        {
+            "price": "8967.64",
+            "amount": "0.027",
+            "best_ask": "8967.64",
+            "best_bid": "8954.85",
+            "taker_side": "BUY",
+            "time": "2019-08-25T14: 29: 54.819Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18232
+        },
+        {
+            "price": "8993.74",
+            "amount": "0.033",
+            "best_ask": "8993.74",
+            "best_bid": "8975.5",
+            "taker_side": "BUY",
+            "time": "2019-08-25T14: 32: 09.711Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18234
+        },
+        {
+            "price": "9025.92",
+            "amount": "0.0306",
+            "best_ask": "9025.92",
+            "best_bid": "8993.5",
+            "taker_side": "BUY",
+            "time": "2019-08-25T14: 38: 10.521Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18236
+        },
+        {
+            "price": "9055.81",
+            "amount": "0.006",
+            "best_ask": "9055.81",
+            "best_bid": "8993.5",
+            "taker_side": "BUY",
+            "time": "2019-08-25T14: 39: 38.479Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18238
+        },
+        {
+            "price": "9036.84",
+            "amount": "0.04073",
+            "best_ask": "9036.84",
+            "best_bid": "9004.89",
+            "taker_side": "BUY",
+            "time": "2019-08-25T14: 45: 23.926Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18240
+        },
+        {
+            "price": "9050.0",
+            "amount": "0.00111",
+            "best_ask": "9066.52",
+            "best_bid": "9050.0",
+            "taker_side": "SELL",
+            "time": "2019-08-25T14: 52: 57.075Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18242
+        },
+        {
+            "price": "9081.53",
+            "amount": "0.01163",
+            "best_ask": "9081.53",
+            "best_bid": "9044.47",
+            "taker_side": "BUY",
+            "time": "2019-08-25T15: 16: 29.762Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18244
+        },
+        {
+            "price": "9040.0",
+            "amount": "0.01161",
+            "best_ask": "9067.7",
+            "best_bid": "9040.0",
+            "taker_side": "SELL",
+            "time": "2019-08-25T15: 20: 40.678Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18246
+        },
+        {
+            "price": "9064.67",
+            "amount": "0.01749",
+            "best_ask": "9064.67",
+            "best_bid": "9040.0",
+            "taker_side": "BUY",
+            "time": "2019-08-25T15: 38: 11.680Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18248
+        },
+        {
+            "price": "9064.73",
+            "amount": "0.01849",
+            "best_ask": "9064.73",
+            "best_bid": "9040.0",
+            "taker_side": "BUY",
+            "time": "2019-08-25T15: 38: 11.680Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18249
+        },
+        {
+            "price": "9064.77",
+            "amount": "0.17092",
+            "best_ask": "9064.77",
+            "best_bid": "9040.0",
+            "taker_side": "BUY",
+            "time": "2019-08-25T15: 38: 11.680Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18250
+        },
+        {
+            "price": "9040.0",
+            "amount": "0.01053",
+            "best_ask": "9059.09",
+            "best_bid": "9040.0",
+            "taker_side": "SELL",
+            "time": "2019-08-25T15: 38: 51.220Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18252
+        },
+        {
+            "price": "9040.0",
+            "amount": "0.015",
+            "best_ask": "9059.09",
+            "best_bid": "9040.0",
+            "taker_side": "SELL",
+            "time": "2019-08-25T15: 38: 51.220Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18253
+        },
+        {
+            "price": "9021.0",
+            "amount": "0.00121",
+            "best_ask": "9059.09",
+            "best_bid": "9021.0",
+            "taker_side": "SELL",
+            "time": "2019-08-25T15: 38: 51.220Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18254
+        },
+        {
+            "price": "9016.29",
+            "amount": "0.00982",
+            "best_ask": "9059.09",
+            "best_bid": "9016.29",
+            "taker_side": "SELL",
+            "time": "2019-08-25T15: 38: 51.220Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18255
+        },
+        {
+            "price": "9056.08",
+            "amount": "0.0093",
+            "best_ask": "9056.08",
+            "best_bid": "9013.51",
+            "taker_side": "BUY",
+            "time": "2019-08-25T15: 40: 22.720Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18257
+        },
+        {
+            "price": "9055.48",
+            "amount": "0.011",
+            "best_ask": "9055.48",
+            "best_bid": "9023.22",
+            "taker_side": "BUY",
+            "time": "2019-08-25T15: 46: 10.594Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18259
+        },
+        {
+            "price": "9054.28",
+            "amount": "0.2642",
+            "best_ask": "9054.28",
+            "best_bid": "9023.22",
+            "taker_side": "BUY",
+            "time": "2019-08-25T15: 48: 10.439Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18261
+        },
+        {
+            "price": "9053.58",
+            "amount": "0.0513",
+            "best_ask": "9053.58",
+            "best_bid": "9019.92",
+            "taker_side": "BUY",
+            "time": "2019-08-25T15: 50: 22.378Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18263
+        },
+        {
+            "price": "9057.59",
+            "amount": "0.0107",
+            "best_ask": "9057.59",
+            "best_bid": "9021.01",
+            "taker_side": "BUY",
+            "time": "2019-08-25T15: 54: 10.724Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18265
+        },
+        {
+            "price": "9057.55",
+            "amount": "0.7008",
+            "best_ask": "9057.55",
+            "best_bid": "9021.01",
+            "taker_side": "BUY",
+            "time": "2019-08-25T15: 56: 10.043Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18267
+        },
+        {
+            "price": "9060.79",
+            "amount": "0.26",
+            "best_ask": "9060.79",
+            "best_bid": "9017.36",
+            "taker_side": "BUY",
+            "time": "2019-08-25T15: 58: 10.806Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18269
+        },
+        {
+            "price": "9063.42",
+            "amount": "0.8311",
+            "best_ask": "9063.42",
+            "best_bid": "9017.36",
+            "taker_side": "BUY",
+            "time": "2019-08-25T15: 58: 10.806Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18270
+        },
+        {
+            "price": "9057.98",
+            "amount": "0.0676",
+            "best_ask": "9057.98",
+            "best_bid": "9017.36",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 00: 24.106Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18272
+        },
+        {
+            "price": "9048.82",
+            "amount": "0.01458",
+            "best_ask": "9048.82",
+            "best_bid": "9020.32",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 02: 11.578Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18274
+        },
+        {
+            "price": "9048.83",
+            "amount": "0.01458",
+            "best_ask": "9048.83",
+            "best_bid": "9020.32",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 02: 11.578Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18275
+        },
+        {
+            "price": "9048.84",
+            "amount": "0.49925",
+            "best_ask": "9048.84",
+            "best_bid": "9020.32",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 02: 11.579Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18276
+        },
+        {
+            "price": "9048.85",
+            "amount": "0.49925",
+            "best_ask": "9048.85",
+            "best_bid": "9020.32",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 02: 11.579Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18277
+        },
+        {
+            "price": "9048.9",
+            "amount": "0.07998",
+            "best_ask": "9048.9",
+            "best_bid": "9020.32",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 02: 11.579Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18278
+        },
+        {
+            "price": "9065.8",
+            "amount": "0.10856",
+            "best_ask": "9065.8",
+            "best_bid": "9020.32",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 02: 11.579Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18279
+        },
+        {
+            "price": "9103.98",
+            "amount": "0.2283",
+            "best_ask": "9103.98",
+            "best_bid": "9058.54",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 04: 13.254Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18281
+        },
+        {
+            "price": "9081.53",
+            "amount": "0.0764",
+            "best_ask": "9081.53",
+            "best_bid": "9040.59",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 08: 11.046Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18283
+        },
+        {
+            "price": "9084.24",
+            "amount": "0.1962",
+            "best_ask": "9084.24",
+            "best_bid": "9050.41",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 10: 21.830Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18285
+        },
+        {
+            "price": "9082.93",
+            "amount": "0.0535",
+            "best_ask": "9082.93",
+            "best_bid": "9050.41",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 12: 11.894Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18287
+        },
+        {
+            "price": "9083.94",
+            "amount": "0.19",
+            "best_ask": "9083.94",
+            "best_bid": "9038.78",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 14: 11.855Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18289
+        },
+        {
+            "price": "9085.97",
+            "amount": "0.01444",
+            "best_ask": "9085.97",
+            "best_bid": "9038.78",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 14: 11.855Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18290
+        },
+        {
+            "price": "9110.98",
+            "amount": "0.39166",
+            "best_ask": "9110.98",
+            "best_bid": "9038.78",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 14: 11.855Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18291
+        },
+        {
+            "price": "9082.23",
+            "amount": "0.0095",
+            "best_ask": "9082.23",
+            "best_bid": "9036.79",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 16: 10.440Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18293
+        },
+        {
+            "price": "9091.53",
+            "amount": "0.0314",
+            "best_ask": "9091.53",
+            "best_bid": "9022.93",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 24: 12.013Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18295
+        },
+        {
+            "price": "9095.54",
+            "amount": "0.0192",
+            "best_ask": "9095.54",
+            "best_bid": "9029.58",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 28: 11.444Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18297
+        },
+        {
+            "price": "9073.32",
+            "amount": "0.0156",
+            "best_ask": "9073.32",
+            "best_bid": "9031.64",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 30: 21.211Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18299
+        },
+        {
+            "price": "9076.52",
+            "amount": "0.17",
+            "best_ask": "9076.52",
+            "best_bid": "9031.4",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 38: 10.831Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18301
+        },
+        {
+            "price": "9110.95",
+            "amount": "0.00123",
+            "best_ask": "9110.95",
+            "best_bid": "9031.4",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 38: 10.831Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18302
+        },
+        {
+            "price": "9111.0",
+            "amount": "0.21587",
+            "best_ask": "9111.0",
+            "best_bid": "9031.4",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 38: 10.831Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18303
+        },
+        {
+            "price": "9065.3",
+            "amount": "0.0054",
+            "best_ask": "9065.3",
+            "best_bid": "9029.63",
+            "taker_side": "BUY",
+            "time": "2019-08-25T16: 42: 12.693Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18305
+        },
+        {
+            "price": "9043.66",
+            "amount": "0.01145",
+            "best_ask": "9069.61",
+            "best_bid": "9043.66",
+            "taker_side": "SELL",
+            "time": "2019-08-25T17: 31: 55.680Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18307
+        },
+        {
+            "price": "9032.83",
+            "amount": "0.04387",
+            "best_ask": "9069.61",
+            "best_bid": "9032.83",
+            "taker_side": "SELL",
+            "time": "2019-08-25T17: 31: 55.680Z",
+            "instrument_code": "BTC_EUR",
+            "sequence": 18308
+        }
+    ],
+    "channel_name": "PRICE_TICKS",
+    "type": "PRICE_TICK_HISTORY"
+}
+{
+    "instrument_code": "ETH_EUR",
+    "history": [
+        {
+            "price": "167.52",
+            "amount": "1.6096",
+            "best_ask": "167.52",
+            "best_bid": "165.7",
+            "taker_side": "BUY",
+            "time": "2019-08-17T19: 01: 43.193Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 497
+        },
+        {
+            "price": "169.0",
+            "amount": "1.5298",
+            "best_ask": "169.0",
+            "best_bid": "165.94",
+            "taker_side": "BUY",
+            "time": "2019-08-18T10: 16: 24.762Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 499
+        },
+        {
+            "price": "170.0",
+            "amount": "0.0701",
+            "best_ask": "170.0",
+            "best_bid": "165.94",
+            "taker_side": "BUY",
+            "time": "2019-08-18T10: 17: 30.048Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 501
+        },
+        {
+            "price": "172.0",
+            "amount": "0.0621",
+            "best_ask": "172.0",
+            "best_bid": "166.0",
+            "taker_side": "BUY",
+            "time": "2019-08-18T12: 04: 04.417Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 503
+        },
+        {
+            "price": "172.17",
+            "amount": "0.125",
+            "best_ask": "175.65",
+            "best_bid": "172.17",
+            "taker_side": "SELL",
+            "time": "2019-08-18T12: 42: 53.449Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 505
+        },
+        {
+            "price": "175.52",
+            "amount": "0.3317",
+            "best_ask": "175.52",
+            "best_bid": "172.04",
+            "taker_side": "BUY",
+            "time": "2019-08-18T12: 52: 51.531Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 507
+        },
+        {
+            "price": "173.55",
+            "amount": "1.4985",
+            "best_ask": "177.05",
+            "best_bid": "173.55",
+            "taker_side": "SELL",
+            "time": "2019-08-18T14: 31: 09.045Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 509
+        },
+        {
+            "price": "175.05",
+            "amount": "1.2001",
+            "best_ask": "178.59",
+            "best_bid": "175.05",
+            "taker_side": "SELL",
+            "time": "2019-08-18T16: 04: 32.214Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 511
+        },
+        {
+            "price": "178.64",
+            "amount": "4.5523",
+            "best_ask": "178.64",
+            "best_bid": "175.1",
+            "taker_side": "BUY",
+            "time": "2019-08-18T16: 12: 58.466Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 513
+        },
+        {
+            "price": "175.76",
+            "amount": "2.5114",
+            "best_ask": "179.32",
+            "best_bid": "175.76",
+            "taker_side": "SELL",
+            "time": "2019-08-18T18: 14: 14.728Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 515
+        },
+        {
+            "price": "178.0",
+            "amount": "0.3",
+            "best_ask": "178.0",
+            "best_bid": "170.0",
+            "taker_side": "BUY",
+            "time": "2019-08-19T04: 17: 12.709Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 517
+        },
+        {
+            "price": "178.0",
+            "amount": "0.0842",
+            "best_ask": "178.0",
+            "best_bid": "175.2",
+            "taker_side": "BUY",
+            "time": "2019-08-19T04: 25: 05.138Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 519
+        },
+        {
+            "price": "178.0",
+            "amount": "0.6158",
+            "best_ask": "178.0",
+            "best_bid": "175.67",
+            "taker_side": "BUY",
+            "time": "2019-08-19T06: 51: 27.954Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 521
+        },
+        {
+            "price": "179.54",
+            "amount": "0.0856",
+            "best_ask": "179.54",
+            "best_bid": "170.0",
+            "taker_side": "BUY",
+            "time": "2019-08-19T08: 02: 03.716Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 523
+        },
+        {
+            "price": "183.28",
+            "amount": "0.0664",
+            "best_ask": "183.28",
+            "best_bid": "179.66",
+            "taker_side": "BUY",
+            "time": "2019-08-19T08: 36: 27.020Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 525
+        },
+        {
+            "price": "183.43",
+            "amount": "4.0",
+            "best_ask": "183.43",
+            "best_bid": "179.79",
+            "taker_side": "BUY",
+            "time": "2019-08-19T08: 53: 59.630Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 527
+        },
+        {
+            "price": "183.42",
+            "amount": "3.05",
+            "best_ask": "183.42",
+            "best_bid": "179.78",
+            "taker_side": "BUY",
+            "time": "2019-08-19T08: 59: 55.265Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 529
+        },
+        {
+            "price": "184.0",
+            "amount": "0.4282",
+            "best_ask": "184.0",
+            "best_bid": "183.42",
+            "taker_side": "BUY",
+            "time": "2019-08-19T14: 58: 34.661Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 531
+        },
+        {
+            "price": "183.42",
+            "amount": "0.1362",
+            "best_ask": "184.0",
+            "best_bid": "183.42",
+            "taker_side": "SELL",
+            "time": "2019-08-19T15: 03: 55.854Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 533
+        },
+        {
+            "price": "180.69",
+            "amount": "0.0628",
+            "best_ask": "182.51",
+            "best_bid": "180.69",
+            "taker_side": "SELL",
+            "time": "2019-08-19T16: 55: 53.511Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 535
+        },
+        {
+            "price": "179.06",
+            "amount": "3.0",
+            "best_ask": "180.86",
+            "best_bid": "179.06",
+            "taker_side": "SELL",
+            "time": "2019-08-19T20: 28: 01.182Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 537
+        },
+        {
+            "price": "182.67",
+            "amount": "1.1003",
+            "best_ask": "182.67",
+            "best_bid": "180.85",
+            "taker_side": "BUY",
+            "time": "2019-08-19T22: 55: 23.552Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 539
+        },
+        {
+            "price": "174.65",
+            "amount": "0.0569",
+            "best_ask": "184.0",
+            "best_bid": "174.65",
+            "taker_side": "SELL",
+            "time": "2019-08-20T05: 46: 38.741Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 541
+        },
+        {
+            "price": "181.1",
+            "amount": "1.011",
+            "best_ask": "181.1",
+            "best_bid": "179.3",
+            "taker_side": "BUY",
+            "time": "2019-08-20T06: 16: 39.095Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 543
+        },
+        {
+            "price": "179.61",
+            "amount": "0.1386",
+            "best_ask": "179.61",
+            "best_bid": "177.83",
+            "taker_side": "BUY",
+            "time": "2019-08-20T09: 03: 04.997Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 545
+        },
+        {
+            "price": "177.94",
+            "amount": "0.32",
+            "best_ask": "177.94",
+            "best_bid": "176.16",
+            "taker_side": "BUY",
+            "time": "2019-08-20T09: 16: 52.649Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 547
+        },
+        {
+            "price": "178.73",
+            "amount": "0.4211",
+            "best_ask": "178.73",
+            "best_bid": "176.95",
+            "taker_side": "BUY",
+            "time": "2019-08-20T11: 25: 51.008Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 549
+        },
+        {
+            "price": "177.36",
+            "amount": "4.995",
+            "best_ask": "179.14",
+            "best_bid": "177.36",
+            "taker_side": "SELL",
+            "time": "2019-08-20T12: 32: 09.712Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 551
+        },
+        {
+            "price": "177.03",
+            "amount": "1.0",
+            "best_ask": "178.81",
+            "best_bid": "177.03",
+            "taker_side": "SELL",
+            "time": "2019-08-20T12: 35: 53.442Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 553
+        },
+        {
+            "price": "177.23",
+            "amount": "0.1",
+            "best_ask": "179.01",
+            "best_bid": "177.23",
+            "taker_side": "SELL",
+            "time": "2019-08-20T14: 07: 28.162Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 555
+        },
+        {
+            "price": "179.54",
+            "amount": "1.1138",
+            "best_ask": "179.54",
+            "best_bid": "177.76",
+            "taker_side": "BUY",
+            "time": "2019-08-20T16: 18: 31.876Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 557
+        },
+        {
+            "price": "178.83",
+            "amount": "1.7138",
+            "best_ask": "178.83",
+            "best_bid": "177.05",
+            "taker_side": "BUY",
+            "time": "2019-08-20T18: 52: 17.768Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 559
+        },
+        {
+            "price": "177.88",
+            "amount": "1.6297",
+            "best_ask": "183.9",
+            "best_bid": "177.88",
+            "taker_side": "SELL",
+            "time": "2019-08-21T00: 39: 11.364Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 561
+        },
+        {
+            "price": "174.65",
+            "amount": "1.0882",
+            "best_ask": "183.9",
+            "best_bid": "174.65",
+            "taker_side": "SELL",
+            "time": "2019-08-21T02: 54: 41.060Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 563
+        },
+        {
+            "price": "169.96",
+            "amount": "0.652",
+            "best_ask": "171.66",
+            "best_bid": "169.96",
+            "taker_side": "SELL",
+            "time": "2019-08-21T05: 23: 33.149Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 565
+        },
+        {
+            "price": "169.81",
+            "amount": "1.0",
+            "best_ask": "171.0",
+            "best_bid": "169.81",
+            "taker_side": "SELL",
+            "time": "2019-08-21T05: 45: 40.568Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 567
+        },
+        {
+            "price": "171.0",
+            "amount": "0.5847",
+            "best_ask": "171.0",
+            "best_bid": "166.0",
+            "taker_side": "BUY",
+            "time": "2019-08-21T06: 19: 13.514Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 569
+        },
+        {
+            "price": "170.69",
+            "amount": "1.2106",
+            "best_ask": "170.69",
+            "best_bid": "168.99",
+            "taker_side": "BUY",
+            "time": "2019-08-21T09: 00: 26.724Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 571
+        },
+        {
+            "price": "167.49",
+            "amount": "3.3",
+            "best_ask": "167.49",
+            "best_bid": "166.02",
+            "taker_side": "BUY",
+            "time": "2019-08-21T12: 33: 03.481Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 573
+        },
+        {
+            "price": "166.01",
+            "amount": "6.0",
+            "best_ask": "171.0",
+            "best_bid": "166.01",
+            "taker_side": "SELL",
+            "time": "2019-08-21T12: 37: 43.809Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 575
+        },
+        {
+            "price": "166.0",
+            "amount": "1.2691",
+            "best_ask": "171.0",
+            "best_bid": "166.0",
+            "taker_side": "SELL",
+            "time": "2019-08-21T12: 37: 43.809Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 576
+        },
+        {
+            "price": "166.0",
+            "amount": "1.0",
+            "best_ask": "171.0",
+            "best_bid": "166.0",
+            "taker_side": "SELL",
+            "time": "2019-08-21T12: 37: 43.809Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 577
+        },
+        {
+            "price": "165.94",
+            "amount": "0.1506",
+            "best_ask": "171.0",
+            "best_bid": "165.94",
+            "taker_side": "SELL",
+            "time": "2019-08-21T12: 37: 43.809Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 578
+        },
+        {
+            "price": "165.8",
+            "amount": "0.4825",
+            "best_ask": "171.0",
+            "best_bid": "165.8",
+            "taker_side": "SELL",
+            "time": "2019-08-21T12: 37: 43.809Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 579
+        },
+        {
+            "price": "165.7",
+            "amount": "1.0",
+            "best_ask": "171.0",
+            "best_bid": "165.7",
+            "taker_side": "SELL",
+            "time": "2019-08-21T12: 38: 28.388Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 581
+        },
+        {
+            "price": "165.0",
+            "amount": "3.0303",
+            "best_ask": "171.0",
+            "best_bid": "165.0",
+            "taker_side": "SELL",
+            "time": "2019-08-21T12: 39: 47.287Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 583
+        },
+        {
+            "price": "166.99",
+            "amount": "0.709",
+            "best_ask": "166.99",
+            "best_bid": "165.33",
+            "taker_side": "BUY",
+            "time": "2019-08-21T13: 21: 53.932Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 585
+        },
+        {
+            "price": "167.5",
+            "amount": "0.1971",
+            "best_ask": "182.0",
+            "best_bid": "167.5",
+            "taker_side": "SELL",
+            "time": "2019-08-21T18: 58: 24.058Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 587
+        },
+        {
+            "price": "167.77",
+            "amount": "1.01",
+            "best_ask": "167.77",
+            "best_bid": "166.3",
+            "taker_side": "BUY",
+            "time": "2019-08-21T19: 13: 27.189Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 589
+        },
+        {
+            "price": "169.62",
+            "amount": "2.3582",
+            "best_ask": "169.62",
+            "best_bid": "167.94",
+            "taker_side": "BUY",
+            "time": "2019-08-22T12: 02: 10.711Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 591
+        },
+        {
+            "price": "173.97",
+            "amount": "1.0",
+            "best_ask": "173.97",
+            "best_bid": "172.23",
+            "taker_side": "BUY",
+            "time": "2019-08-22T15: 57: 15.226Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 593
+        },
+        {
+            "price": "174.53",
+            "amount": "0.1976",
+            "best_ask": "174.53",
+            "best_bid": "172.79",
+            "taker_side": "BUY",
+            "time": "2019-08-22T16: 52: 11.840Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 595
+        },
+        {
+            "price": "177.0",
+            "amount": "0.1976",
+            "best_ask": "177.0",
+            "best_bid": "168.44",
+            "taker_side": "BUY",
+            "time": "2019-08-22T16: 52: 30.298Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 597
+        },
+        {
+            "price": "174.54",
+            "amount": "0.1524",
+            "best_ask": "174.54",
+            "best_bid": "172.8",
+            "taker_side": "BUY",
+            "time": "2019-08-22T16: 52: 48.368Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 599
+        },
+        {
+            "price": "175.0",
+            "amount": "0.999",
+            "best_ask": "176.21",
+            "best_bid": "175.0",
+            "taker_side": "SELL",
+            "time": "2019-08-22T18: 30: 03.023Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 601
+        },
+        {
+            "price": "175.0",
+            "amount": "0.4296",
+            "best_ask": "176.12",
+            "best_bid": "175.0",
+            "taker_side": "SELL",
+            "time": "2019-08-22T19: 19: 32.433Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 603
+        },
+        {
+            "price": "174.54",
+            "amount": "0.6",
+            "best_ask": "177.0",
+            "best_bid": "174.54",
+            "taker_side": "SELL",
+            "time": "2019-08-22T19: 29: 42.746Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 605
+        },
+        {
+            "price": "175.04",
+            "amount": "0.51",
+            "best_ask": "175.04",
+            "best_bid": "173.3",
+            "taker_side": "BUY",
+            "time": "2019-08-22T20: 23: 04.714Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 607
+        },
+        {
+            "price": "172.86",
+            "amount": "3.7596",
+            "best_ask": "173.54",
+            "best_bid": "172.86",
+            "taker_side": "SELL",
+            "time": "2019-08-22T21: 08: 37.514Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 609
+        },
+        {
+            "price": "177.0",
+            "amount": "0.0579",
+            "best_ask": "177.0",
+            "best_bid": "165.0",
+            "taker_side": "BUY",
+            "time": "2019-08-22T21: 28: 03.245Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 611
+        },
+        {
+            "price": "174.75",
+            "amount": "0.1",
+            "best_ask": "174.75",
+            "best_bid": "173.01",
+            "taker_side": "BUY",
+            "time": "2019-08-22T21: 28: 24.131Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 613
+        },
+        {
+            "price": "174.11",
+            "amount": "0.101",
+            "best_ask": "174.11",
+            "best_bid": "172.37",
+            "taker_side": "BUY",
+            "time": "2019-08-22T21: 47: 36.715Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 615
+        },
+        {
+            "price": "173.79",
+            "amount": "0.1518",
+            "best_ask": "175.53",
+            "best_bid": "173.79",
+            "taker_side": "SELL",
+            "time": "2019-08-22T23: 21: 40.564Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 617
+        },
+        {
+            "price": "174.8",
+            "amount": "2.1779",
+            "best_ask": "174.8",
+            "best_bid": "166.0",
+            "taker_side": "BUY",
+            "time": "2019-08-23T08: 00: 03.610Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 619
+        },
+        {
+            "price": "175.0",
+            "amount": "0.1534",
+            "best_ask": "175.0",
+            "best_bid": "166.0",
+            "taker_side": "BUY",
+            "time": "2019-08-23T08: 00: 03.610Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 620
+        },
+        {
+            "price": "173.39",
+            "amount": "0.2",
+            "best_ask": "175.13",
+            "best_bid": "173.39",
+            "taker_side": "SELL",
+            "time": "2019-08-23T13: 34: 25.857Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 622
+        },
+        {
+            "price": "177.0",
+            "amount": "0.2783",
+            "best_ask": "177.0",
+            "best_bid": "176.48",
+            "taker_side": "BUY",
+            "time": "2019-08-23T14: 17: 25.251Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 624
+        },
+        {
+            "price": "176.6",
+            "amount": "0.8593",
+            "best_ask": "176.6",
+            "best_bid": "174.84",
+            "taker_side": "BUY",
+            "time": "2019-08-23T16: 34: 40.129Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 626
+        },
+        {
+            "price": "175.1",
+            "amount": "0.6",
+            "best_ask": "175.1",
+            "best_bid": "174.94",
+            "taker_side": "BUY",
+            "time": "2019-08-23T16: 52: 52.191Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 628
+        },
+        {
+            "price": "168.6",
+            "amount": "0.3368",
+            "best_ask": "169.96",
+            "best_bid": "168.6",
+            "taker_side": "SELL",
+            "time": "2019-08-24T14: 22: 57.445Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 630
+        },
+        {
+            "price": "169.45",
+            "amount": "0.4486",
+            "best_ask": "169.45",
+            "best_bid": "168.6",
+            "taker_side": "BUY",
+            "time": "2019-08-24T15: 09: 05.175Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 632
+        },
+        {
+            "price": "168.6",
+            "amount": "0.5894",
+            "best_ask": "169.74",
+            "best_bid": "168.6",
+            "taker_side": "SELL",
+            "time": "2019-08-24T15: 25: 01.813Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 634
+        },
+        {
+            "price": "168.27",
+            "amount": "0.9252",
+            "best_ask": "169.97",
+            "best_bid": "168.27",
+            "taker_side": "SELL",
+            "time": "2019-08-24T15: 54: 48.735Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 636
+        },
+        {
+            "price": "169.62",
+            "amount": "0.8351",
+            "best_ask": "171.32",
+            "best_bid": "169.62",
+            "taker_side": "SELL",
+            "time": "2019-08-24T16: 38: 35.867Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 638
+        },
+        {
+            "price": "171.58",
+            "amount": "17.5716",
+            "best_ask": "171.58",
+            "best_bid": "169.88",
+            "taker_side": "BUY",
+            "time": "2019-08-24T19: 55: 05.378Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 640
+        },
+        {
+            "price": "171.61",
+            "amount": "0.8582",
+            "best_ask": "171.61",
+            "best_bid": "169.91",
+            "taker_side": "BUY",
+            "time": "2019-08-25T03: 00: 58.353Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 642
+        },
+        {
+            "price": "172.01",
+            "amount": "0.8877",
+            "best_ask": "172.01",
+            "best_bid": "170.29",
+            "taker_side": "BUY",
+            "time": "2019-08-25T07: 49: 21.519Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 644
+        },
+        {
+            "price": "171.21",
+            "amount": "2.0",
+            "best_ask": "172.93",
+            "best_bid": "171.21",
+            "taker_side": "SELL",
+            "time": "2019-08-25T10: 09: 11.240Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 646
+        },
+        {
+            "price": "173.02",
+            "amount": "0.4623",
+            "best_ask": "173.02",
+            "best_bid": "171.3",
+            "taker_side": "BUY",
+            "time": "2019-08-25T10: 41: 48.847Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 648
+        },
+        {
+            "price": "171.8",
+            "amount": "1.0173",
+            "best_ask": "176.77",
+            "best_bid": "171.8",
+            "taker_side": "SELL",
+            "time": "2019-08-25T14: 29: 06.175Z",
+            "instrument_code": "ETH_EUR",
+            "sequence": 650
+        }
+    ],
+    "channel_name": "PRICE_TICKS",
+    "type": "PRICE_TICK_HISTORY"
+}
