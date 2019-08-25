@@ -13,6 +13,8 @@ import csv
 import matplotlib.dates as mdates
 import matplotlib.ticker as mticker
 from mpl_finance import candlestick_ohlc
+import re
+
 
 class Dialog(QtWidgets.QMainWindow):
     def __init__(self):
@@ -27,14 +29,17 @@ class Dialog(QtWidgets.QMainWindow):
         self.bDeapthMinus.clicked.connect(self.zoomOutDeapthChart)
         self.tabWidget.currentChanged.connect(self.tabWidgetChanged)
         self.cBTraidPairs.currentIndexChanged.connect(self.cBTraidPairsChanged)
+        self.chBNow.stateChanged.connect(self.checkBoxNowChanged)
+        self.bImport.clicked.connect(self.csvImport)
         self.zoomDeapthChart = 0.1
+        self.dateFormat = re.compile('.{4}-.{2}-.{2}')
         self.time = '2019-08-07T11:00:00.080Z'
         self.RepeatingEventTimer = QtCore.QTimer()
         self.RepeatingEventTimer.timeout.connect(self.RepeatingEvents)
         self.RepeatingEventTimer.start(10000)
 
         self.getServerTime()
-        self.fillTraidingPairs()
+        self.fillInitial()
         # sub=json.dumps({'type': 'SUBSCRIBE','channels': [{'name': 'MARKET_TICKER','instrument_codes': ['PAN_BTC','BTC_EUR','MIOTA_BTC','MIOTA_EUR','ETH_EUR']}]})
         # ws.send(sub)
 
@@ -43,6 +48,8 @@ class Dialog(QtWidgets.QMainWindow):
             print("Home")
         elif self.tabWidget.currentIndex() == self.tabWidget.indexOf(self.tabDataView):
             self.cBTraidPairsChanged()
+        elif self.tabWidget.currentIndex() == self.tabWidget.indexOf(self.tabDataImport):
+            print("DataImport")
         elif self.tabWidget.currentIndex() == self.tabWidget.indexOf(self.tabConfig):
             print("Config")
 
@@ -52,6 +59,8 @@ class Dialog(QtWidgets.QMainWindow):
         elif i == self.tabWidget.indexOf(self.tabDataView):
             print("DataView")
             #self.plotDeapthChart(self.zoomDeapthChart)
+        elif i == self.tabWidget.indexOf(self.tabDataImport):
+            print("DataImport")
         elif i == self.tabWidget.indexOf(self.tabConfig):
             print("Config")
 
@@ -60,6 +69,7 @@ class Dialog(QtWidgets.QMainWindow):
         data=json.loads(res.data.decode('utf-8'))
         currency = self.cBTraidPairs.currentText()
         [_,csell]=currency.split("_")
+        self.lVolume24h.setText(str(float(data[-1]['volume']))+' '+csell)
         self.lVolume1Days.setText(str(float(data[-2]['volume']))+' '+csell)
         self.lVolume2Days.setText(str(float(data[-3]['volume']))+' '+csell)
         self.lVolume3Days.setText(str(float(data[-4]['volume']))+' '+csell)
@@ -135,12 +145,85 @@ class Dialog(QtWidgets.QMainWindow):
         self.zoomDeapthChart+=0.1
         self.plotDeapthChart(self.zoomDeapthChart)
         print(self.zoomDeapthChart)
-    
-    def fillTraidingPairs(self):
+
+    def csvImport(self):
+        self.pBImport.setValue(0)
+        [number, period] = self.cBCandlestickPeriod.currentText().split(' ')
+        if self.dateFormat.match(self.tBFrom.displayText()) and self.dateFormat.match(self.tBTo.displayText()) and len(self.tBFrom.displayText())==10 and len(self.tBTo.displayText())==10:
+            [j,m,d]=self.tBFrom.displayText().split('-')
+            [j1,m1,d1]=self.tBTo.displayText().split('-')
+            try:
+                int(j)
+                int(j1)
+                int(m)
+                int(m1)
+                int(d)
+                int(d1)
+            except:
+                print("No Int")
+                return
+            fromDateNum = mdates.datestr2num(self.tBFrom.displayText())
+            toDateNum = mdates.datestr2num(self.tBTo.displayText())
+        else:
+            print("No Valid Pattern")
+            return
+        csvDatei=open('import/'+self.cBTraidPairs_2.currentText()+'p'+number+period+'f'+self.tBFrom.displayText()+'t'+self.tBTo.displayText()+'.csv','w+',newline='')
+        csvwriter = csv.writer(csvDatei)
+        csvwriter.writerow(['high','low','open','close','volume','time'])
+        diffDays = toDateNum-fromDateNum
+        itterations = np.ceil(diffDays/7.0)
+        print(itterations)
+        if itterations == 1:
+            stop = toDateNum
+            start = fromDateNum
+        else:
+            start = fromDateNum
+            stop = start+7            
+        for i in range(0,int(itterations)):
+            print(str(mdates.num2date(start))[0:10])
+            print(str(mdates.num2date(stop))[0:10])
+            if self.chBNow.checkState() == 2 and i == int(itterations)-1:
+                self.getServerTime()
+                res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/candlesticks/'+self.cBTraidPairs_2.currentText()+'?unit='+period+'&period='+number+'&from='+str(mdates.num2date(start))[0:10]+'T00:00:00.080Z&to='+self.time)
+                stop = start
+            else:
+                res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/candlesticks/'+self.cBTraidPairs_2.currentText()+'?unit='+period+'&period='+number+'&from='+str(mdates.num2date(start))[0:10]+'T00:00:00.080Z&to='+str(mdates.num2date(stop))[0:10]+'T00:00:00.090Z')
+                start = stop
+                if start+7<toDateNum:
+                    stop = start+7
+                else:
+                    stop = toDateNum
+            data=json.loads(res.data.decode('utf-8'))
+            for interval in data:
+                interval.pop('last_sequence')
+                interval.pop('granularity')
+                interval.pop('instrument_code')
+                interval['time']=interval['time'][11:23]
+                csvwriter.writerow(interval.values())
+            self.pBImport.setValue(int((i+1)/float(itterations)*100))
+        csvDatei.close()
+ 
+
+    def fillInitial(self):
+        # Fill Candlestick Periods
+        self.cBCandlestickPeriod.addItem("1 MINUTES")
+        self.cBCandlestickPeriod.addItem("5 MINUTES")
+        self.cBCandlestickPeriod.addItem("15 MINUTES")
+        self.cBCandlestickPeriod.addItem("30 MINUTES")
+        self.cBCandlestickPeriod.addItem("1 HOURS")
+        self.cBCandlestickPeriod.addItem("4 HOURS")
+        self.cBCandlestickPeriod.addItem("1 DAYS")
+        self.cBCandlestickPeriod.addItem("1 WEEKS")
+        self.cBCandlestickPeriod.addItem("1 MONTHS")
+        # Fill textBoxes
+        self.tBFrom.setText("2019-08-07")
+        self.tBTo.setText(self.time[0:10])
+        # Fill Traiding Pairs
         res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/instruments')
         data=json.loads(res.data.decode('utf-8'))
         for pair in data:
             self.cBTraidPairs.addItem(pair['base']['code']+"_"+pair['quote']['code'])
+            self.cBTraidPairs_2.addItem(pair['base']['code']+"_"+pair['quote']['code'])
     
     def getServerTime(self):
         res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/time')
@@ -152,7 +235,13 @@ class Dialog(QtWidgets.QMainWindow):
         idx = (np.abs(array - value)).argmin()
         # return (array[idx],idx)
         return idx  
-
+    
+    def checkBoxNowChanged(self):
+        if self.chBNow.checkState() == 2:
+            self.tBTo.setEnabled(False)
+            self.tBTo.setText(self.time[0:10])
+        else:
+            self.tBTo.setEnabled(True)
 
 def on_message(ws, message):
     msg=json.loads(message)
