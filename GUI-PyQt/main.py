@@ -171,29 +171,37 @@ class Dialog(QtWidgets.QMainWindow):
         csvwriter = csv.writer(csvDatei)
         csvwriter.writerow(['high','low','open','close','volume','time'])
         diffDays = toDateNum-fromDateNum
-        itterations = np.ceil(diffDays/7.0)
+        itterations = np.ceil(diffDays)
         print(itterations)
         if itterations == 1:
             stop = toDateNum
             start = fromDateNum
         else:
             start = fromDateNum
-            stop = start+7            
+            stop = start+1    
+        if self.chBNow.checkState() == 2:
+            itterations +=1
         for i in range(0,int(itterations)):
             print(str(mdates.num2date(start))[0:10])
             print(str(mdates.num2date(stop))[0:10])
             if self.chBNow.checkState() == 2 and i == int(itterations)-1:
                 self.getServerTime()
-                res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/candlesticks/'+self.cBTraidPairs_2.currentText()+'?unit='+period+'&period='+number+'&from='+str(mdates.num2date(start))[0:10]+'T00:00:00.080Z&to='+self.time)
+                res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/candlesticks/'+self.cBTraidPairs_2.currentText()+'?unit='+period+'&period='+number+'&from='+self.time[0:10]+'T00:00:00.080Z&to='+self.time)
                 stop = start
             else:
                 res = http.request('GET','https://api.exchange.bitpanda.com/public/v1/candlesticks/'+self.cBTraidPairs_2.currentText()+'?unit='+period+'&period='+number+'&from='+str(mdates.num2date(start))[0:10]+'T00:00:00.080Z&to='+str(mdates.num2date(stop))[0:10]+'T00:00:00.090Z')
                 start = stop
-                if start+7<toDateNum:
-                    stop = start+7
+                if start+1<toDateNum:
+                    stop = start+1
                 else:
                     stop = toDateNum
             data=json.loads(res.data.decode('utf-8'))
+            try:
+                if data['error'] == 'CANDLESTICKS_TIME_RANGE_TOO_BIG':
+                    print("CANDLESTICKS_TIME_RANGE_TOO_BIG")
+                    return
+            except:
+                pass
             for interval in data:
                 interval.pop('last_sequence')
                 interval.pop('granularity')
