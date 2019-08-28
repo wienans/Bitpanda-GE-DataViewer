@@ -11,6 +11,12 @@ import csv
 import matplotlib.pyplot as plt
 import numpy as np
 
+def findNearestIndex(array, value):
+    array = np.asarray(array)
+    idx = (np.abs(array - value)).argmin()
+    # return (array[idx],idx)
+    return idx
+
 def on_message(ws, message):
     msg=json.loads(message)
     print(msg)
@@ -42,6 +48,8 @@ def startWS():
 if __name__ == "__main__":
     global ws
     global ffile
+
+    plt.style.use('dark_background')
     #load Config
     config=open("config.json","r")
     cdata=json.load(config)
@@ -104,23 +112,21 @@ if __name__ == "__main__":
                     bidamount=np.insert(bidamount,0,bidamount[0]+float(bid['amount']))
                 except:
                    bidamount=np.insert(bidamount,0,float(bid['amount'])) 
-            middleprice = bidprices[-1]
-            print(middleprice)
             for ask in asks:
                 askprices=np.append(askprices,float(ask['price']))
                 try:
                     askamount=np.append(askamount,askamount[-1]+float(ask['amount']))
                 except:
                     askamount=np.append(askamount,float(ask['amount']))
+            middleprice=(bidprices[-1]+askprices[0])/2
             prices=np.append(bidprices,askprices)
             amount=np.append(bidamount,askamount)
             bidcap = np.multiply(bidamount,bidprices)
             askcap = np.multiply(askamount,askprices)
             cap=np.multiply(amount,prices)
             plt.plot(bidprices,bidamount,'g',askprices,askamount,'r')
-            # plt.axis([0.8*middleprice,1.2*middleprice,0,20000])
-            plt.axis([0,middleprice*5,0,np.maximum(np.amax(bidamount),np.amax(askamount))])
-            plt.suptitle('Tiefendiagram '+ currency)
+            plt.axis([0.8*middleprice,1.2*middleprice,0,np.maximum(bidamount[findNearestIndex(bidprices,0.8*middleprice)]*1.1,1.1*askamount[findNearestIndex(askprices,1.2*middleprice)])])
+            plt.suptitle('Tiefendiagram '+ currency+'\nMittlerer Preis:'+ str(middleprice))
             plt.show()
             print("Finished OrderBook Grabbing")
 
