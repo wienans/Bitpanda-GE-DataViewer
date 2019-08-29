@@ -85,12 +85,24 @@ class Dialog(QtWidgets.QMainWindow):
         n=len(data)
         quotes = np.empty((n,0)).tolist()
         i=0
+        # Candle Chart
+        # for instance in data:
+        #     quotes[i].append(mdates.datestr2num(str(instance['time'][0:19].replace('T',' '))))
+        #     quotes[i].append(float(instance['open']))
+        #     quotes[i].append(float(instance['high']))
+        #     quotes[i].append(float(instance['low']))
+        #     quotes[i].append(float(instance['close']))
+        #     i+=1
+        # Heikin Ashi Chart
         for instance in data:
             quotes[i].append(mdates.datestr2num(str(instance['time'][0:19].replace('T',' '))))
-            quotes[i].append(float(instance['open']))
-            quotes[i].append(float(instance['high']))
-            quotes[i].append(float(instance['low']))
-            quotes[i].append(float(instance['close']))
+            if(i == 0):
+                quotes[i].append(float(instance['open']))
+            else:
+                quotes[i].append(float((quotes[i-1][1]+quotes[i-1][4])/2.0))
+            quotes[i].append(np.maximum(float(instance['high']),quotes[i][1]))
+            quotes[i].append(np.minimum(float(instance['low']),quotes[i][1]))
+            quotes[i].append(float((float(instance['close'])+float(instance['open'])+float(instance['high'])+float(instance['low']))/4.0))
             i+=1
         self.mplCandleChart.canvas.axes.clear()
         candlestick_ohlc(self.mplCandleChart.canvas.axes, quotes,width=0.05)
